@@ -1,0 +1,28 @@
+loat alpha;
+void setup(){
+size(500,500);
+background(#39497E);
+println("wo zhen de bu hui zuo walldrawing,yi dian dou kan bu dong");
+println("zhe ge zuo ye shi yi dian dou bu hui zuo");
+}
+//sin();
+//cos();
+
+void draw(){
+alpha+=0.01;
+
+if (mousePressed){
+fill(#EAC86F);
+noStroke();
+}else{
+fill(#EAC86F);
+noStroke();
+}
+alpha+=0.01;
+fill(#EAC86F,10);
+float die =abs(#EAC86F*sin(alpha));
+fill(die);
+float rectSizeX = map(mouseX, 0, width, 20, 100);
+float rectSizeY = map(mouseY, 0, height, 20, 100);
+rect(mouseX,mouseY,rectSizeX,rectSizeY);
+}
